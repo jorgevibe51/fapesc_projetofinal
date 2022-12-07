@@ -1,0 +1,5 @@
+regras:
+nao permita filme sem nome, genero, ano
+usar banco de dados mysql
+preservar boas praticas
+gravar video mostrando como o sistema funciona
