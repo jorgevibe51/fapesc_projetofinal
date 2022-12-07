@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+@charset 'UTF-8';
+
+* {
+  margin: 2px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#formulario{
+  background-color: bisque;
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24);
+}
+
+th{
+  background-color: gray;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+td {
+  background-color: lightgray;
+}
+#tabela{
+  width: auto;
+  font-size: 13px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label{
+  display: block;
+}
+
+input[type="text"],[type="number"]{
+  width: 90%;
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+#buscar{
+  width: auto;
+  margin-left: 10px;
+}
+
+select{
+  width: 93%;
+  height: 33px;
+  margin-bottom: 5px;
+}
+
+input[type="button"]{
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btnSalvar{
+  background-color: steelblue;
+}
+
+#btnCancelar{
+  background-color: gray;
+}
+
+#btnEditar{
+  background-color: steelblue;
+  font-size: 70%;
+  height: 20px;
+  margin-right: 2px;
+  width: 60px;
+  line-height: calc(20px - 10px * 2);
+}
+
+#btnRemover{
+  background-color: red;
+  font-size: 70%;
+  height: 20px;
+  width: 60px;
+  line-height: calc(20px - 10px * 2);
 }
