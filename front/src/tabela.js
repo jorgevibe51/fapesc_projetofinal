@@ -19,7 +19,7 @@ function Tabela(){
             <tbody>
                 <tr>
                     <td id="linha">1</td>
-                    <td id="titulo">A volta dos que não foram</td>
+                    <td id="titulo">A volta dos que foram</td>
                     <td id="genero">Comédia</td>
                     <td id="ano">2022</td>
                     <td id="acoes">
