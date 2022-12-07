@@ -21,7 +21,7 @@ function Tabela(){
                     <td id="linha">1</td>
                     <td id="titulo">A volta dos que não foram</td>
                     <td id="genero">Comédia</td>
-                    <td id="ano">Ano</td>
+                    <td id="ano">2022</td>
                     <td id="acoes">
                     <input id="btnEditar" type="button" value="Editar"></input>
                     <input id="btnRemover" type="button" value="Remover"></input>

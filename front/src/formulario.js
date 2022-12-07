@@ -12,11 +12,11 @@ function Formulario(){
             <label>Genero
             <select id="genero">
                 <option value="romance" selected>Romance</option>
-                <option value="drama" selected>Drama</option>
-                <option value="terror" selected>Terror</option>
-                <option value="comedia" selected>Comedia</option>
-                <option value="ficção" selected>Ficção</option>
-                <option value="documentário" selected>Documentário</option>
+                <option value="drama">Drama</option>
+                <option value="terror">Terror</option>
+                <option value="comedia">Comedia</option>
+                <option value="ficção">Ficção</option>
+                <option value="documentário">Documentário</option>
             </select>
             </label>
             </div>
