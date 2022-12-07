@@ -10,7 +10,7 @@ function Tabela(){
             <thead>
                 <tr>
                 <th>#</th>
-                <th>Nome do filme</th>
+                <th>Título do filme</th>
                 <th>Gênero</th>
                 <th>Ano</th>
                 <th>Ações</th>

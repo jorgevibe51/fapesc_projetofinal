@@ -7,7 +7,7 @@ function App() {
 
   const filme = {
     id:0,
-    nome:'',
+    titulo:'',
     genero:'',
     ano:''
   }
@@ -25,7 +25,7 @@ function App() {
     setObjFilme({...objFilme, [e.target.name]:e.target.value})
   }
 
-  const cadastrar = () => {
+  const salvar = () => {
     fetch("http://localhost:8080/filmes/cadastrar",{
       method:'post',
       body:JSON.stringify(objFilme),
@@ -93,7 +93,7 @@ function App() {
       <div>
         <Formulario eventoInsere={insereDados}
                     objeto={objFilme}
-                    cadastrar={cadastrar}
+                    salvar={salvar}
                     editar={editar}
                     remover={remover}
                     cancelar={limpaFormulario}/>
