@@ -31,6 +31,10 @@ function Tabela({lista, editarFilme, remover}){
                     }
                 </tbody>
             </table>
+            <p><br/><br/><br/>
+            Jorge Vicenzi Beckhauser<br/>
+            Unibave-Fapesc - 2022<br/>
+            Projeto disponível no <a href="https://github.com/jorgevibe51/fapesc_projetofinal">Github</a></p>
         </div>
     )
 }
