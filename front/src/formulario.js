@@ -6,12 +6,12 @@ function Formulario({eventoInsere, salvar, objeto, cancelar}){
                 <h3>Cadastro de filme</h3>
                 <div>
                 <label>Título
-                <input type="text" name="titulo" value={objeto.titulo} onChange={eventoInsere} placeholder="título do filme"/>
+                <input id="idTitulo" type="text" name="titulo" value={objeto.titulo} onChange={eventoInsere} placeholder="título do filme" required/>
                 </label>
                 </div>
                 <div>
                 <label>Gênero
-                <select value={objeto.genero} name="genero" onChange={eventoInsere}>
+                <select id="idGenero" value={objeto.genero} name="genero" onChange={eventoInsere} required>
                     <option value="" selected>--&lt;escolha um gênero&gt;--</option>
                     <option value="romance">Romance</option>
                     <option value="drama">Drama</option>
@@ -24,7 +24,7 @@ function Formulario({eventoInsere, salvar, objeto, cancelar}){
                 </div>
                 <div>
                 <label>Ano
-                <input type="number" name="ano" value={objeto.ano} onChange={eventoInsere} placeholder="Ano do filme (YYYY)"/>
+                <input id = "idAno" type="number" name="ano" value={objeto.ano} onChange={eventoInsere} placeholder="Ano do filme (YYYY)" required/>
                 </label>
                 </div>
                 <center>

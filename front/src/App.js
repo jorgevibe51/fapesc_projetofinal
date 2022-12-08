@@ -16,9 +16,13 @@ function App() {
   const[objFilme, setObjFilme] = useState(filme)
 
   useEffect(() => {
-    fetch("http://localhost:8080/filmes/listar")
-    .then(resposta => resposta.json())
-    .then(resposta_conversao => setFilmes(resposta_conversao))
+    let palavraChave = document.querySelector('#buscar').value
+    let url = (palavraChave === '') 
+              ? "http://localhost:8080/filmes/listar":
+                "http://localhost:8080/filmes/titulo/"+palavraChave
+      fetch(url)
+      .then(resposta => resposta.json())
+      .then(resposta_conversao => setFilmes(resposta_conversao))
   })
 
   const insereDados = (e) => {
@@ -69,7 +73,7 @@ function App() {
       method:'delete'
     })
     .then(resposta_conversao => {
-      alert('Produto removido com sucesso!')
+      alert('Filme removido com sucesso!')
       let copia = [...filmes]
       let indice = copia.findIndex((f) => {
         return f.id === objFilme.id
@@ -89,11 +93,34 @@ function App() {
   }
 
   const salvar = () => {
-    if(objFilme.id === 0){
-      cadastrar()
-    }else{
-      editar()
+    if (cadastroValido()){
+      if(objFilme.id === 0){
+        cadastrar()
+      }else{
+        editar()
+      }
     }
+  }
+
+  function cadastroValido(){
+    let titulo = document.getElementById('idTitulo').value
+    let genero = document.getElementById('idGenero').value
+    let ano = document.getElementById('idAno').value
+    let mensagem = ''
+    if (titulo == '') {
+      mensagem += 'Título obrigatório.\n'
+    }
+    if (genero == '') {
+      mensagem += 'Gênero obrigatório.\n'
+    }
+    if (ano == '') {
+      mensagem += 'Ano obrigatório.'
+    }
+    if (mensagem != ''){
+      alert(mensagem)
+      return false
+    }
+    return true;
   }
 
   return (

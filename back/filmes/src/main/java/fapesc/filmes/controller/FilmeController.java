@@ -32,8 +32,8 @@ public class FilmeController {
     }
 
     @GetMapping("/titulo/{palavraChave}")
-    public ResponseEntity<List<Filme>> buscarFilmes(@PathVariable String palavra){
-        return ResponseEntity.ok().body(service.buscarTituloContendo(palavra));
+    public ResponseEntity<List<Filme>> buscarFilmes(@PathVariable String palavraChave){
+        return ResponseEntity.ok().body(service.buscarTituloContendo(palavraChave));
     }
 
     @PostMapping("/cadastrar")

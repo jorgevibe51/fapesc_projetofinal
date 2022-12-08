@@ -2,7 +2,7 @@ function Tabela({lista, editarFilme, remover}){
     return (
         <div id="tabela">
             <div>
-                <label>Buscar nome:
+                <label>Buscar título:
                     <input id="buscar" type="text" placeholder="palavra chave"/>
                 </label>
             </div>
