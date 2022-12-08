@@ -1,4 +1,4 @@
-function Tabela(){
+function Tabela({lista, editarFilme, remover}){
     return (
         <div id="tabela">
             <div>
@@ -7,28 +7,29 @@ function Tabela(){
                 </label>
             </div>
             <table>
-            <thead>
-                <tr>
-                <th>#</th>
-                <th>Título do filme</th>
-                <th>Gênero</th>
-                <th>Ano</th>
-                <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="linha">1</td>
-                    <td id="titulo">A volta dos que foram</td>
-                    <td id="genero">Comédia</td>
-                    <td id="ano">2022</td>
-                    <td id="acoes">
-                    <input id="btnEditar" type="button" value="Editar"></input>
-                    <input id="btnRemover" type="button" value="Remover"></input>
-                    </td>
-
-                </tr>
-            </tbody>
+                <thead>
+                    <th>#</th>
+                    <th>Título do filme</th>
+                    <th>Gênero</th>
+                    <th>Ano</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    {
+                        lista.map((obj, ndx) => (
+                            <tr key={ndx}>
+                                <td>{ndx+1}</td>
+                                <td>{obj.titulo}</td>
+                                <td>{obj.genero}</td>
+                                <td>{obj.ano}</td>
+                                <td>
+                                <button id="btnEditar" type="button" onClick={() => editarFilme(ndx)}>Editar</button>
+                                <button id="btnRemover" type="button"onClick={() => remover(ndx, obj.id)} >Remover</button>
+                                </td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
             </table>
         </div>
     )

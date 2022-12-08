@@ -25,7 +25,7 @@ function App() {
     setObjFilme({...objFilme, [e.target.name]:e.target.value})
   }
 
-  const salvar = () => {
+  const cadastrar = () => {
     fetch("http://localhost:8080/filmes/cadastrar",{
       method:'post',
       body:JSON.stringify(objFilme),
@@ -64,8 +64,8 @@ function App() {
     })
   }
 
-  const remover = (indice) => {
-    fetch("http://localhost:8080/filmes/remover" + objFilme.id,{
+  const remover = (indice, id) => {
+    fetch("http://localhost:8080/filmes/remover/" + id,{
       method:'delete'
     })
     .then(resposta_conversao => {
@@ -88,19 +88,27 @@ function App() {
     setObjFilme(filmes[indice])
   }
 
+  const salvar = () => {
+    if(objFilme.id === 0){
+      cadastrar()
+    }else{
+      editar()
+    }
+  }
+
   return (
     <div class="app">
       <div>
         <Formulario eventoInsere={insereDados}
                     objeto={objFilme}
                     salvar={salvar}
-                    editar={editar}
-                    remover={remover}
                     cancelar={limpaFormulario}/>
       </div>
       <div>
         <Tabela lista={filmes}
-                selecionarFilme={selecionar}/>
+                editarFilme={selecionar}
+                remover={remover}
+            />
       </div>
     </div>
   );

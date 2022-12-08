@@ -16,7 +16,7 @@ function Formulario({eventoInsere, salvar, objeto, cancelar}){
                     <option value="romance">Romance</option>
                     <option value="drama">Drama</option>
                     <option value="terror">Terror</option>
-                    <option value="comedia">Comedia</option>
+                    <option value="comedia">Comédia</option>
                     <option value="ficcao">Ficção</option>
                     <option value="documentario">Documentário</option>
                 </select>
@@ -28,8 +28,8 @@ function Formulario({eventoInsere, salvar, objeto, cancelar}){
                 </label>
                 </div>
                 <center>
-                <input id="btnSalvar" type="button" onClick={salvar} value="Salvar"></input>
-                <input id="btnCancelar" type="button" onClick={cancelar} value="Cancelar"></input>
+                <button id="btnSalvar" type="button" onClick={salvar}>Salvar</button>
+                <button id="btnCancelar" type="button" onClick={cancelar}>Cancelar</button>
                 </center>
             </form>
         </div>
